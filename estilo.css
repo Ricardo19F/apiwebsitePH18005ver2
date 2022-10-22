@@ -4,6 +4,10 @@
 * {
   font-family: "Source Sans Pro", sans-serif;
 }
+h3 {
+  text-align: center;
+  margin-top: 40px;
+}
 img {
   width: 3cm;
   height: 3cm;
@@ -103,4 +107,24 @@ h1 {
 }
 .filtros {
   padding: 100px;
+}
+.form-insert {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+#insert-form .form-control {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-control label {
+  margin-right: 5px;
+}
+.form-control-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
 }

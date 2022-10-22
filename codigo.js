@@ -133,3 +133,28 @@ function eliminar(id) {
       obtenerProductos();
     });
 }
+function insertarProducto() {
+  var data = {
+    title: document.getElementById("nombre-i").value,
+    price: document.getElementById("precio-i").value,
+    description: document.getElementById("desc-i").value,
+    image: document.getElementById("foto-i").value,
+    category: document.getElementById("foto-i").value,
+  };
+  fetch("https://api-generator.retool.com/Mr4pNk/productos", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      Accept: "application/json",
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json)
+    .then((data) => {
+      document.getElementById("insert-form").reset();
+      orden = 0;
+      obtenerProductos();
+    });
+}
+
+//curl -X POST -H 'Content-Type: application/json' -d '{"key":"value"}' https://api-generator.retool.com/Mr4pNk/productos

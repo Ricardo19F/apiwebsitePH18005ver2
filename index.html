@@ -16,6 +16,27 @@
         <button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button>
       </div>
     </div>
+    <h3>Insertar nuevo producto</h3>
+    <div class="form-insert">
+      <form name="insert" id="insert-form">
+        <div class="form-control"><label for="">Nombre</label><input required id="nombre-i" type="text" /></div>
+        <div class="form-control"><label for="">Precio</label><input required id="precio-i" type="number" /></div>
+        <div class="form-control"><label for="">Descripcion</label><input required id="desc-i" type="textarea" /></div>
+        <div class="form-control"><label for="">Foto</label><input required id="foto-i" type="url" /></div>
+        <div class="form-control">
+          <label for="">Categorias</label
+          ><select name="category" id="category_select">
+            <option value="caballeros">Caballeros</option>
+            <option value="damas">Damas</option>
+            <option value="electronicos">Electronicos</option>
+            <option value="joyeria">Joyería</option>
+          </select>
+        </div>
+        <div class="form-control-button">
+          <button type="button" onclick="insertarProducto()">GUARDAR</button>
+        </div>
+      </form>
+    </div>
     <div id="listado" style="display: none">
       <form name="filtroprods" id="filtroprods">
         <div class="filtros">
