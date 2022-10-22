@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo web api</title>
+    <meta charset="utf-8" />
+    <link rel="StyleSheet" href="estilo.css" type="text/css" media="screen" />
+    <script src="codigo.js"></script>
+  </head>
+
+  <body>
+    <div class="info">
+      <h1>Ejemplo web api - La tienda mas fake que pueda existir</h1>
+      <hr />
+      <p class="datos">PH18005 - Ricardo Alfredo Perez Hernandez <br />Grupo 05 Code Geeks - TPI115 2022</p>
+      <div class="btn-container">
+        <button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button>
+      </div>
+    </div>
+    <div id="listado" style="display: none">
+      <form name="filtroprods" id="filtroprods">
+        <div class="filtros">
+          <h2>Seleccione Categorias</h2>
+          <div class="checkbox-row"><input type="checkbox" id="c1" onchange="checking(this)" value="c1" checked />Electronicos</div>
+          <div class="checkbox-row"><input type="checkbox" id="c2" onchange="checking(this)" value="c2" checked />Joyería</div>
+          <div class="checkbox-row"><input type="checkbox" id="c3" onchange="checking(this)" value="c3" checked />Ropa Caballero</div>
+          <div class="checkbox-row"><input type="checkbox" id="c4" onchange="checking(this)" value="c4" checked />Ropa Dama</div>
+          <ol>
+            <li>Click en la imagen para Acercamiento</li>
+            <li>Click en precio para ordenar Asc o Desc</li>
+          </ol>
+        </div>
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>foto</th>
+              <th id="price">price</th>
+              <th>title</th>
+              <th>description</th>
+              <th>category</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
